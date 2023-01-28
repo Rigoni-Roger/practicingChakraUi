@@ -1,22 +1,12 @@
-import { Box, Grid, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import { TaskComponent } from "../component/TaskComponent";
+import { FAKE_DATA } from "../data/FAKE_DATA";
 
 export const Dashboard = () => {
+  const tasks = FAKE_DATA;
   return (
-    <SimpleGrid p="10px" minChildWidth="250px" spacing={10}>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
-      <Box background="white" border="1px solid" height="200px"></Box>
+    <SimpleGrid minChildWidth="300px" spacing={10}>
+      {tasks && tasks.map((task) => <TaskComponent task={task} />)}
     </SimpleGrid>
   );
 };

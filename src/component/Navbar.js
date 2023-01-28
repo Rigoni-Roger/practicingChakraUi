@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, HStack, Spacer, Text } from "@chakra-ui/rea
 
 export const Navbar = () => {
   return (
-    <Flex as="nav" p="10px">
+    <Flex as="nav" p="10px" mb="40px">
       <Heading as="h1">Task ChakraUi</Heading>
       <Spacer />
       <HStack spacing={"20px"}>
