@@ -1,10 +1,8 @@
 import {
   ChatIcon,
   CheckCircleIcon,
-  EditIcon,
   EmailIcon,
   StarIcon,
-  ViewIcon,
   WarningIcon,
 } from "@chakra-ui/icons";
 import {
@@ -21,12 +19,12 @@ import {
 export const Profile = () => {
   const selected = { color: "white", bg: "purple.400" };
   return (
-    <Tabs>
+    <Tabs mt="40px" p="20px" variant="enclosed" colorScheme="purple">
       <TabList>
         <Tab _selected={selected}>Account Info</Tab>
         <Tab _selected={selected}>Task History</Tab>
       </TabList>
-      <TabPanels>
+      <TabPanels py="10px">
         <TabPanel>
           <List spacing={4}>
             <ListItem>
